@@ -1,0 +1,41 @@
+logging:
+  level: INFO
+  loggers:
+    org.example: DEBUG
+server:
+  applicationConnectors:
+    - type: http
+      port: 9000
+  adminConnectors:
+    - type: http
+      port: 9001
+
+message: This is a message defined in config.yml
+messageRepetition: 10
+
+database:
+  # the name of your JDBC driver
+  driverClass: org.postgresql.Driver
+
+  # the username
+  user: phuser
+
+  # the password
+  password: phuser
+
+  # the JDBC URL
+  url: jdbc:postgresql://localhost:5432/phuser
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 1s
+
+  # the SQL query to run when validating a connection's liveness
+  validationQuery: "/* MyApplication Health Check */ SELECT 1"
+
+  # the minimum number of connections to keep open
+  minSize: 8
+
+  # the maximum number of connections to keep open
+  maxSize: 32
+
+  # whether or not idle connections should be validated
+  checkConnectionWhileIdle: false
