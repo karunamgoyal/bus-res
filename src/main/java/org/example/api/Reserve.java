@@ -7,10 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
+
 public class Reserve {
     private String userName;
     private String busNum;

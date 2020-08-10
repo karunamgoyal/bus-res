@@ -1,5 +1,6 @@
 package org.example.api;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -17,7 +18,7 @@ public class Bus {
     private Date endTime;
     private int capacity;
     private int available;
-
+    @JsonDeserialize(as = DOWSerialize.class)
     private int dow;
 
     public Bus(String company, String busNum, String source, String destination, Date startTime, Date endTime, int capacity, int available, int dow) {
