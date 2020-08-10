@@ -15,13 +15,13 @@ public class BusResConfiguration extends Configuration {
     @JsonProperty
     private String additionalMessage = "This is optional";
 
-    @JsonProperty("database")
-    private DataSourceFactory database = new DataSourceFactory();
-
-    @JsonProperty
-    public DataSourceFactory getDataStoreFactory() {
-        return database;
-    }
+//    @JsonProperty("database")
+//    private DataSourceFactory database = new DataSourceFactory();
+//
+//    @JsonProperty
+//    public DataSourceFactory getDataStoreFactory() {
+//        return database;
+//    }
 
     @JsonProperty
     @Max(10)

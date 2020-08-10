@@ -26,7 +26,7 @@ public class BusResApplication extends Application<BusResConfiguration> {
     public void run(final BusResConfiguration configuration,
                     final Environment environment) {
         final JdbiFactory factory = new JdbiFactory();
-        final Jdbi jdbi = factory.build(environment, configuration.getDataStoreFactory(),"postgresql");
+        //final Jdbi jdbi = factory.build(environment, configuration.getDataStoreFactory(),"postgresql");
         //environment.jersey().register(new ContactResources(jdbi));
     }
 
